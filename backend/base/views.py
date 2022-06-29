@@ -25,7 +25,7 @@ def getProducts(request):
 @api_view(['GET'])
 def getProduct(request, pk):
     print('Hello IK', pk)
-    product = Product.objects.get(_id=pk)
+    product = Product.objects.get(_id=pk)  #returns data by id
     serailizer = ProductSerializer(product, many=False)
 
     # for i in products:
